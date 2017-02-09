@@ -43,6 +43,7 @@
 		ED3932C71E3114BA0064CD11 /* PastTestsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ED3932C61E3114BA0064CD11 /* PastTestsViewController.mm */; };
 		ED3AB3311D2337920061F266 /* GeoIP.dat in Resources */ = {isa = PBXBuildFile; fileRef = ED3AB32E1D2337920061F266 /* GeoIP.dat */; };
 		ED3AB3321D2337920061F266 /* GeoIPASNum.dat in Resources */ = {isa = PBXBuildFile; fileRef = ED3AB32F1D2337920061F266 /* GeoIPASNum.dat */; };
+		ED4A977A1E4CC2F7002E104F /* JSONFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4A97791E4CC2F7002E104F /* JSONFileReader.m */; };
 		ED4D60561A7162C400777275 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED4D60541A7162C400777275 /* Localizable.strings */; };
 		ED58E8CA1D0C627D00C74F10 /* TestStorage.mm in Sources */ = {isa = PBXBuildFile; fileRef = ED58E8C91D0C627D00C74F10 /* TestStorage.mm */; };
 		ED5AFD661E2529400039ECCB /* global.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED5AFD651E2529400039ECCB /* global.txt */; };
@@ -112,6 +113,8 @@
 		ED3932C61E3114BA0064CD11 /* PastTestsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PastTestsViewController.mm; sourceTree = "<group>"; };
 		ED3AB32E1D2337920061F266 /* GeoIP.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeoIP.dat; sourceTree = "<group>"; };
 		ED3AB32F1D2337920061F266 /* GeoIPASNum.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeoIPASNum.dat; sourceTree = "<group>"; };
+		ED4A97781E4CC2F7002E104F /* JSONFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONFileReader.h; path = Utility/JSONFileReader.h; sourceTree = "<group>"; };
+		ED4A97791E4CC2F7002E104F /* JSONFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONFileReader.m; path = Utility/JSONFileReader.m; sourceTree = "<group>"; };
 		ED4D60551A7162C400777275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED58E8C81D0C627D00C74F10 /* TestStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestStorage.h; path = Utility/TestStorage.h; sourceTree = "<group>"; };
 		ED58E8C91D0C627D00C74F10 /* TestStorage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TestStorage.mm; path = Utility/TestStorage.mm; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 				EDCAB39F1E2BC6BD000878CA /* RoundedButton.m */,
 				EDC869C71E3178A800124C46 /* Tests.h */,
 				EDC869C81E3178A800124C46 /* Tests.mm */,
+				ED4A97781E4CC2F7002E104F /* JSONFileReader.h */,
+				ED4A97791E4CC2F7002E104F /* JSONFileReader.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				ED8816B41D8C6A4B00D5D725 /* RisksViewController.m in Sources */,
 				EDCAB3A01E2BC6BD000878CA /* RoundedButton.m in Sources */,
 				ED25282B1CEA35640073A29B /* LogViewController.mm in Sources */,
+				ED4A977A1E4CC2F7002E104F /* JSONFileReader.m in Sources */,
 				ED3932C41E3114740064CD11 /* AboutViewController.m in Sources */,
 				ED25282E1CEA35640073A29B /* RunTestsViewController.mm in Sources */,
 				ED58E8CA1D0C627D00C74F10 /* TestStorage.mm in Sources */,

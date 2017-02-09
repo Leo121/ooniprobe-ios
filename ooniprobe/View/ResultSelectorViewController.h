@@ -7,14 +7,16 @@
 #import "RunButton.h"
 #import "Tests.h"
 #import "TestResult.h"
+#import "JSONFileReader.h"
 
 @interface ResultSelectorViewController : UITableViewController {
     NSString *nextTest;
     NSMutableArray *testResults;
 }
 
-@property (nonatomic, strong) NSArray *items;
+//@property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) IBOutlet NSString *testName;
 @property (nonatomic, strong) NSString *log_file;
+@property (nonatomic, strong) NSString *json_file;
 
 @end

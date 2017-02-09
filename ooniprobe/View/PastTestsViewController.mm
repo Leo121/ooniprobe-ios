@@ -128,14 +128,14 @@
 
 -(void)goToTest:(NetworkMeasurement*)current{
     nextTest = current;
-    NSArray *items = [Tests getItems:nextTest.json_file];
+    //NSArray *items = [Tests getItems:nextTest.json_file];
     if (!nextTest.viewed){
         [TestStorage set_viewed:nextTest.test_id];
         [self reloadTable];
     }
-    if ([items count] > 1)
+    if ([current.name isEqualToString:@"web_connectivity"])
         [self performSegueWithIdentifier:@"toInputList" sender:self];
-    else if ([items count] == 1 && [[items objectAtIndex:0] length] > 0)
+    else if (current.entry)
         [self performSegueWithIdentifier:@"toResult" sender:self];
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"no_result", nil) message:NSLocalizedString(@"no_result_msg", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"ok", @"") otherButtonTitles:nil];
@@ -167,17 +167,20 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"toResult"]){
-        NSArray *items = [Tests getItems:nextTest.json_file];
+        //NSArray *items = [Tests getItems:nextTest.json_file];
+        JSONFileReader *jReader = [[JSONFileReader alloc] initWithFile:nextTest.json_file encoding:NSUTF8StringEncoding];
         ResultViewController *vc = (ResultViewController * )segue.destinationViewController;
-        [vc setContent:[items objectAtIndex:0]];
+        //[vc setContent:[items objectAtIndex:0]];
+        [vc setContent:[jReader readLine]];
         [vc setTestName:nextTest.name];
         [vc setLog_file:nextTest.log_file];
     }
     else if ([[segue identifier] isEqualToString:@"toInputList"]){
         ResultSelectorViewController *vc = (ResultSelectorViewController * )segue.destinationViewController;
-        [vc setItems:[Tests getItems:nextTest.json_file]];
+       //[vc setItems:[Tests getItems:nextTest.json_file]];
         [vc setTestName:nextTest.name];
         [vc setLog_file:nextTest.log_file];
+        [vc setJson_file:nextTest.json_file];
     }
 }
 

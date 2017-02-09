@@ -9,12 +9,25 @@
 @end
 
 @implementation ResultSelectorViewController;
-@synthesize items, testName;
+@synthesize testName;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(testName, nil);
     testResults = [[NSMutableArray alloc] init];
+    
+    JSONFileReader *jReader = [[JSONFileReader alloc] initWithFile:self.json_file encoding:NSUTF8StringEncoding];
+    NSString *content;
+    while ((content = [jReader readLine]) != nil) {
+        TestResult *testResult = [TestResult new];
+        NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        testResult.input = [NSString stringWithFormat:@"%@", [json objectForKey:@"input"]];
+        int anomaly = [self checkAnomaly:[json objectForKey:@"test_keys"]];
+        testResult.anomaly = anomaly;
+        [testResults addObject:testResult];
+    }
+    /*
     for(int i=0;i<[items count];i++)
     {
         NSString *content = [items objectAtIndex:i];
@@ -26,6 +39,7 @@
         testResult.anomaly = anomaly;
         [testResults addObject:testResult];
     }
+    */
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,7 +93,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    nextTest = [items objectAtIndex:indexPath.row];
+    //nextTest = [items objectAtIndex:indexPath.row];
+    NSArray *items = [Tests getItems:self.json_file];
+    NSLog(@"%@", [items objectAtIndex:indexPath.row]);
+    
+    JSONFileReader *jReader = [[JSONFileReader alloc] initWithFile:self.json_file encoding:NSUTF8StringEncoding];
+    nextTest = [jReader readLine:indexPath.row];
+    NSLog(@"%@", nextTest);
     [self performSegueWithIdentifier:@"toResult" sender:self];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -87,7 +107,9 @@
 -(IBAction)viewTest:(id)sender event:(id)event{
     CGPoint currentTouchPosition = [[[event allTouches] anyObject] locationInView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint: currentTouchPosition];
-    nextTest = [items objectAtIndex:indexPath.row];
+    //nextTest = [items objectAtIndex:indexPath.row];
+    JSONFileReader *jReader = [[JSONFileReader alloc] initWithFile:self.json_file encoding:NSUTF8StringEncoding];
+    nextTest = [jReader readLine:indexPath.row];
     [self performSegueWithIdentifier:@"toResult" sender:self];
 }
 
@@ -95,7 +117,7 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"toResult"]){
         ResultViewController *vc = (ResultViewController * )segue.destinationViewController;
-        [vc setContent:nextTest];
+        [vc setContent:[nextTest substringToIndex:[nextTest length]-1]];
         [vc setLog_file:self.log_file];
         [vc setTestName:testName];
     }
