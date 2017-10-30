@@ -1,0 +1,26 @@
+Erfasse Hinweise auf Internet Zensur. Messe die Geschwindigkeit und Performance deines Netzwerks. Spiele eine aktive Rolle bei der Ausweitung der Transparenz von Informationskontrollen. 
+Durch das Ausführen von ooniprobe untersuchst du das Blockieren von Webseiten, die Geschwindigkeit und Performance deines Netzwerks und ob sich Systeme, die zur Zensur oder Überwachung dienen können, in deinem Netzwerk befinden.
+
+Diese Tests wurden vom Open Observatory of Network Interference (OONI) entwickelt, ein Freies Software Projekt (unter dem Tor Projekt), das zum Ziel hat, Internet Zensur weltweit aufzudecken. 
+Seit 2012 hat OONI Millionen von Netzwerk Messungen in mehr als 190 Ländern durchgeführt und dabei mehrere Fälle von Netzwerk-Interferenzen aufgedeckt. Durch das Ausführen von ooniprobe hilfst du, die Transparenz im Bezug auf weltweite Internet Zensur zu erweitern. 
+
+▶ Sammeln von Hinweisen auf Internet Zensur
+OONIs 'Web Connectivity' Tests wurden entworfen, um die Sperrung von Webseiten durch sog. DNS tampering, TCP/IP Blocking oder transparente HTTP Proxys zu ermitteln. Durch das Ausführen dieses Tests erfasst du Daten, die als Hinweise auf Internet Zensur dienen können. Zusätzlich werden dir mit Ratschläge zur Umgehung angeboten. 
+
+▶ Aufdecken von Systemen, die zur Zensur und Überwachung dienen
+OONIs 'HTTP Invalid Request Line' Test wurde entworfen, um die Anwesenheit von Systemen, die für Zensur und Überwachung verantwortlich sein können, aufzudecken. 
+
+▶ Messe die Geschwindigkeit und Performance deines Netzwerks
+OONIs Implementierung des 'Network Diagnostic Test' (NDT) misst die Geschwindigkeit deines Netzwerks durch Verbindung zu M-Lab Servern in deiner Nähe und durch das Sammeln von systemnahen TCP/IP Informationen, die helfen können, die Geschwindigkeit und Performance deines Netzwerks zu messen. 
+
+▶ Offene Daten
+OONI veröffentlicht alle Daten zu den erfassten Netzwerk Messungen, um Dritten die Möglichkeit zu geben, unabhängige Untersuchungen durchzuführen, OONIs Ergebnisse zu überprüfen und/oder anderweitige Forschungsfragen zu beantworten. Daten dieser Art helfen darüber hinaus, die Transparenz im Bezug auf Internet Zensur auszuweiten. Alle Daten sind im OONI Explorer veröffentlicht: https://explorer.ooni.torproject.org/  
+
+▶ Freie Software
+Alle OONI Tests, sowie seine NDT Implementierung, basieren auf Freier- und Open Source Software. Der Quelltext ist unter folgendem Link zu finden: https://github.com/thetorproject/ooniprobe-ios
+
+
+Folge uns auf Twitter: https://twitter.com/OpenObservatory
+
+
+Bitte beachte: Das Ausführen von ooniprobe könnte gegen die AGB deines Internet Providers verstoßen oder in legale Grauzonen deines Landes fallen. Durch das Ausführen von ooniprobe verbindest du dich mit möglicherweise unerlaubten Internet Diensten und benutzt Internet-Zensur-Umgehungsmethoden wie Tor. Das OONI Projekt publiziert alle Daten, die von Sonden übermittelt werden, potenziell mit Einbeziehung deiner IP Adresse oder anderen identifizierbaren Informationen. Darüber hinaus wird deine Benutzung von ooniprobe jedem, der Zugang zu deinem Computer, sowie jedem, der deine Internet Verbindung überwachen kann (wie dein Arbeitgeber, Internet Provider oder Regierung), erkennbar sein.

@@ -1,0 +1,26 @@
+Recueillez des preuves de censure de l'Internet. Mesurez la vitesse et les performances de votre réseau. Participez activement à dévoiler le contrôle de l'information dans le monde entier.
+En exécutant ooniprobe, vous examinerez le blocage des sites Web, la vitesse et les performances de votre réseau, ainsi que la présence de systèmes qui pourraient être la source de censure ou de surveillance.
+
+Ces tests ont été développés par l'observatoire ouvert du dysfonctionnement du réseau « Open Observatory of Network Interference » (OONI), un projet de logiciel libre (découlant du Projet Tor ) dont le but est de mettre au grand jour la censure d'Internet dans le monde entier.
+Depuis 2012, OONI a recueilli des millions de mesures du réseau dans plus de 190 pays, révélant plusieurs cas de dysfonctionnement des réseaux. En exécutant ooniprobe, vous aiderez à dévoiler la censure d'Internet dans le monde entier.
+
+▶ Collecte de preuves de censure d'Internet
+Le test Connectivité Web d'OONI est conçu pour examiner si l'accès aux sites Web est bloqué par une manipulation DNS, un blocage TCP/IP ou par un mandataire HTTP transparent. En exécutant ce test, vous recueillerez des données qui peuvent servir de preuve de censure d'Internet. Des conseils de contournement seront aussi fournis.
+
+▶ Détection de la présence de systèmes de censure ou de surveillance
+Le test HTTP Ligne de requête invalide d'OONI est conçu pour détecter la présence de systèmes qui pourraient être la source de censure ou de surveillance.
+
+▶ Mesure de la vitesse et des performances du réseau
+La mise en œuvre du test diagnostic du réseau (TDR) d'OONI mesure la vitesse de votre réseau en se connectant aux serveurs M-Lab près de chez vous et en recueillant des informations TCP/IP de bas niveau qui peuvent aider à déterminer la vitesse et les performances de votre réseau.
+
+▶ Données ouvertes
+OONI publie toutes les données de mesure réseau qu'il recueille, car les données ouvertes permettent à des tiers d'entreprendre des recherches indépendantes, de vérifier les résultats d'OONI ou de répondre à d'autres questions de recherche. De telles données aident aussi à dévoiler les cas de censure d'Internet dans le monde entier. Toutes les données sont publiées sur l'explorateur OONI : https://explorer.ooni.torproject.org/
+
+▶ Logiciel libre
+Tous les tests d'OONI, ainsi que sa mise en œuvre du TDR, sont fondés sur des logiciels libres et ouverts. Vous trouverez le code source ici : https://github.com/thetorproject/ooniprobe-ios
+
+
+Suivez-nous sur Twitter : https://twitter.com/OpenObservatory
+
+
+Veuillez noter : l'utilisation d'ooniprobe pourrait être contraire aux conditions générales d'utilisation de votre FAI ou juridiquement discutable dans votre pays. En exécutant ooniprobe, vous vous connecterez à des services Web qui pourraient être interdits et utiliserez des méthodes de contournement de la censure Web telles que Tor. Le projet OONI publiera les données recueillies par les vérifications, en incluant possiblement votre adresse IP et d'autres informations nominatives. De plus, quiconque accédera à votre ordinateur ou surveillera votre connexion internet (tel que votre employé, FAI ou gouvernement) saura sans équivoque que vous utilisez ooniprobe.
